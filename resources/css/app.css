@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.flex::before,
+.flex::after {
+    display: none !important;
+}
+
+.input-primary{
+    @apply focus:outline-alerange focus:outline-none focus:bg-form-bg bg-form-bg ;
+}
+
+.input-primary-outline{
+    @apply bg-white focus:bg-white border-alerange focus:border-alerange;
+    @apply file:bg-alerange file:text-white file:rounded-md file:p-2;
+}
+
+.btn-primary{
+    @apply text-white bg-alerange;
+}
+.btn-warning{
+    @apply text-white bg-yellow-500;
+}
+.btn-danger{
+    @apply text-white bg-red-500;
+}
+.btn-light-outline{
+    @apply text-white border border-white;
+}
+.btn-white-outline{
+    @apply text-black border border-[#f1f1f1];
+}
