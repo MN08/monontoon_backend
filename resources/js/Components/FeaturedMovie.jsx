@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import PropTypes from 'prop-types';
 
 FeaturedMovie.propTypes={
@@ -21,10 +22,10 @@ export default function FeaturedMovie({
                           <img src={thumbnail}
                               className="object-cover rounded-[30px] w-[350px] h-[240px]" alt="" />
                           {/* Movie Rating */}
-                          <div className="rating absolute top-0 left-0">
+                          <div className="absolute top-0 left-0 rating">
                             <div className="p-[30px] flex items-center gap-1">
                                 <img src="/icons/ic_star.svg" alt=""/>
-                                <span className="text-sm font-medium text-white mt-1">
+                                <span className="mt-1 text-sm font-medium text-white">
                                     {rating?.toFixed(1)}/5.0
                                 </span>
                             </div>
@@ -35,7 +36,7 @@ export default function FeaturedMovie({
                                   <div className="font-medium text-[22px] text-white">
                                     {name}
                                   </div>
-                                  <p className="mb-0 text-white text-sm font-light">
+                                  <p className="mb-0 text-sm font-light text-white">
                                     {category}
                                   </p>
                               </div>
@@ -44,7 +45,7 @@ export default function FeaturedMovie({
                                   <img src="/icons/ic_play.svg" width="50" alt=""/>
                               </div>
                           </div>
-                          <a href={slug} className="inset-0 absolute z-50"></a>
+                          <Link href={route('prototype.movie.show',slug)} className="absolute inset-0 z-50"></Link>
                         </div>
     )
 }
