@@ -18,14 +18,14 @@ export default function Button({
     className = '',
     variant = 'primary',
     disabled,
-    processing,
     children,
     ...props }) {
     return (
         <button
             {...props}
             className={
-                `rounded-2xl w-full py-[13px] text-center ${processing && "opacity-30"} btn-${variant}` + className
+                `rounded-2xl w-full py-[13px] text-center ${disabled && "opacity-30"} btn-${variant}` + className
+
             }
             disabled={disabled}
         >
