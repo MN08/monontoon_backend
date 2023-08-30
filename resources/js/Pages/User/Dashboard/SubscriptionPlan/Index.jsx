@@ -23,7 +23,7 @@ export default function SubscriptionPlan({auth,subscriptionPlans}){
                     <SubscriptionCard
                         name={subscriptionPlan.name}
                         price={subscriptionPlan.price}
-                        durationInMonth={subscriptionPlan.durationInMonth}
+                        durationInMonth={subscriptionPlan.active_periode_in_months}
                         features={JSON.parse(subscriptionPlan.features)}
                         isPremium={subscriptionPlan.name === 'Premium'}
                         key={subscriptionPlan.id}
