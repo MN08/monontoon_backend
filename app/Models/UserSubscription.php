@@ -11,7 +11,7 @@ class UserSubscription extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillabel = [
+    protected $fillable = [
         'user_id',
         'subscription_plan_id',
         'price',

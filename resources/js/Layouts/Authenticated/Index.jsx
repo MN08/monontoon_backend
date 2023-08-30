@@ -2,13 +2,13 @@ import { Head } from "@inertiajs/react";
 import Sidebar from "./Sidebar";
 import TopBar from "./Topbar";
 
-export default function AuthenticatedUser({user,children}){
+export default function AuthenticatedUser({activePlan,user,children}){
     return(
         <>
         <Head title="Dashboard"/>
             <div className="hidden mx-auto max-w-screen lg:block">
                 {/* Sidebar */}
-                    <Sidebar/>
+                    <Sidebar auth={activePlan}/>
                 {/* End Sidebar */}
                 {/* Content */}
                 <div className="ml-[300px] px-[50px]">
