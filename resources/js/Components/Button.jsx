@@ -10,11 +10,11 @@ Button.propTypes = {
         "light-outline",
         "white-outline",
     ]),
-    processing: PropTypes.bool,
     children:PropTypes.node,
 }
 
 export default function Button({
+    type = 'submit',
     className = '',
     variant = 'primary',
     disabled,
@@ -23,10 +23,10 @@ export default function Button({
     return (
         <button
             {...props}
-            className={
-                `rounded-2xl w-full py-[13px] text-center ${disabled && "opacity-30"} btn-${variant}` + className
-
-            }
+            type={type}
+            className={`rounded-2xl py-[13px] text-center w-full ${
+                disabled && "opacity-30"
+            } btn-${variant} ${className}`}
             disabled={disabled}
         >
             {children}

@@ -1,60 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "input.css";
+@import "button.css";
+@import "sidebar.css";
 
 
 
 .flex::before,
 .flex::after {
     display: none !important;
-}
-
-.input-primary{
-    @apply focus:outline-alerange focus:outline-none focus:bg-form-bg bg-form-bg ;
-}
-
-.input-primary-outline{
-    @apply bg-white focus:bg-white border-alerange focus:border-alerange;
-    @apply file:bg-alerange file:text-white file:rounded-md file:p-2;
-}
-
-.btn-primary{
-    @apply text-white bg-alerange;
-}
-.btn-warning{
-    @apply text-white bg-yellow-500;
-}
-.btn-danger{
-    @apply text-white bg-red-500;
-}
-.btn-light-outline{
-    @apply text-white border border-white;
-}
-.btn-white-outline{
-    @apply text-black border border-[#f1f1f1];
-}
-
-
-@layer components{
-    .side-link{
-        @apply flex items-center font-normal text-black text-sm w-full mb-5 gap-3 transition-all;
-    }
-
-    .side-link svg{
-        @apply text-[#B7B7B7];
-    }
-    .side-link.active{
-        @apply font-semibold border-r-[3px] border-alerange;
-    }
-
-    .side-link.active svg{
-        @apply text-alerange;
-    }
-
-    input.top-search{
-        @apply rounded-full border border-gray-2 placeholder:text-gray-1 text-base text-gray-1 px-5 py-[11px]
-        w-full max-w-[570px] focus:outline-none focus:ring-2 transition-all bg-no-repeat
-        bg-[center_right_20px]
-        ;
-    }
 }

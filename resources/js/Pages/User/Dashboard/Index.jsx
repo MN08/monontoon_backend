@@ -1,7 +1,7 @@
 import Flickity from "react-flickity-component";
 import FeaturedMovie from "@/Components/FeaturedMovie";
 import MovieCard from "@/Components/MovieCard";
-import AuthenticatedUser from "@/Layouts/Authenticated";
+import AuthenticatedUser from "@/Layouts/Authenticated/Index";
 import { Head } from "@inertiajs/react";
 
 
@@ -16,7 +16,7 @@ export default function Dashboard({auth,featuredMovies,movies}){
         draggable: ">1"
     }
     return (
-        <AuthenticatedUser user={auth.user} activePlan={auth}>
+         <AuthenticatedUser auth={auth}>
             <Head>
                 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
             </Head>
