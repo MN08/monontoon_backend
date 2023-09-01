@@ -24,7 +24,7 @@ export default forwardRef(function TextInput({
     value,
     defaultValue,
     variant = "primary",
-    autoComplete,
+    // autoComplete,
     required,
     isFocused = false,
     handleChange,
@@ -49,7 +49,7 @@ export default forwardRef(function TextInput({
             defaultValue={defaultValue}
             className={`rounded-2xl py-[13px] px-7 w-full input-${variant} ${isError && InputError}` + className}
             ref={input}
-            autoComplete={autoComplete}
+            // autoComplete={autoComplete}
             required={required}
             onChange={(e)=>handleChange(e)}
             placeholder={placeholder}
