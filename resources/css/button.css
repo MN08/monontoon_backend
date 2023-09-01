@@ -6,6 +6,10 @@
     @apply bg-yellow-500 text-white;
 }
 
+.btn-restore {
+    @apply bg-red-700 text-white;
+}
+
 .btn-danger {
     @apply bg-red-500 text-white;
 }
