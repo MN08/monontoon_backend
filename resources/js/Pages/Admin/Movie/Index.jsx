@@ -1,12 +1,12 @@
 import Button from "@/Components/Button";
 import FlashMessage from "@/Components/FlashMessage";
-import AuthenticatedUser from "@/Layouts/Authenticated/Index";
+import Authenticated from "@/Layouts/Authenticated/Index";
 import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function Index({auth,flashMessage,movies}){
     const {delete: destroy, put} = useForm();
     return(
-    <AuthenticatedUser auth={auth}>
+    <Authenticated auth={auth}>
         <Head title="List Movie"/>
         <Link href={route('admin.dashboard.movie.create')}>
             <Button type="button" className="w-40 mb-8">
@@ -63,6 +63,6 @@ export default function Index({auth,flashMessage,movies}){
                 ))}
             </tbody>
         </table>
-    </AuthenticatedUser>
+    </Authenticated>
     )
 }

@@ -2,7 +2,7 @@ import { Head } from "@inertiajs/react";
 import Sidebar from "./Sidebar";
 import TopBar from "./Topbar";
 
-export default function AuthenticatedUser({auth,children}){
+export default function Authenticated({auth,children}){
     return(
         <>
         <Head title="Dashboard"/>
@@ -15,6 +15,8 @@ export default function AuthenticatedUser({auth,children}){
                     <div className="py-10 flex flex-col gap-[50px]">
                         {/* TopBar */}
                         <TopBar name={auth.user.name}/>
+                        {/* {console.log(auth.user.name)} */}
+                        {/* <TopBar/> */}
                         {/* End TopBar */}
                         <main>{children}</main>
                     </div>

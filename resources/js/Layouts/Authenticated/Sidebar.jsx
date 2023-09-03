@@ -43,7 +43,7 @@ export default function Sidebar({auth}){
             </div>
             {/* <!-- Subscription details --> */}
 
-            {auth.activePlan && (
+                {/* {auth.activePlan && (
                     <SubscriptionDetail
                     name={auth.activePlan.name}
                     isPremium={auth.activePlan.name === "Premium"}
@@ -52,7 +52,7 @@ export default function Sidebar({auth}){
                     }
                     activeDays={auth.activePlan.activeDays}
                     />
-                )}
+                )} */}
 
             {/* <!-- ./Subscription details --> */}
 
